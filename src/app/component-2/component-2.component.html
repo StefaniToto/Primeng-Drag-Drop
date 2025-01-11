@@ -1,0 +1,18 @@
+<p>component-2 works!</p>
+<div
+  cdkDropList
+  class="example-list"
+  (cdkDropListEntered)="dragStart($event)"
+  (cdkDropListDropped)="drop($event)"
+>
+  <div
+    class="example-box"
+    *ngFor="let movie of movies"
+    cdkDrag
+    (cdkDragStarted)="dragStart($event)"
+  >
+    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+    {{ movie }}
+  </div>
+</div>
+<!--(cdkDropListEntered)="dragStart($event)" not wokring when cdkdrag-->

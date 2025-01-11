@@ -1,0 +1,12 @@
+<p>component-1 works!</p>
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let movie of movies" cdkDrag
+
+       #draggable="cdkDrag"
+       [class.pointer-events-none]="draggable._dragRef.isDragging()"
+  >
+    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+    {{ movie }}
+
+  </div>
+</div>
