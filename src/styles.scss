@@ -1,53 +1,25 @@
+@import "primeicons/primeicons.css";
 html {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 body {
-    font-family: var(--font-family);
-    font-weight: normal;
-    background: var(--surface-ground);
-    color: var(--text-color);
-    padding: 1rem;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  background: var(--surface-ground);
+  color: var(--text-color);
+  padding: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.card {
-    background: var(--surface-card);
-    padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+.pointer-add {
+  pointer-events: visible !important;
 }
-@import "primeicons/primeicons.css";
 
-//:host::ng-deep .cdk-drag-preview , cdk-drop-list-dragging{
-//  cursor: grabbing;
-//  pointer-events: none !important;
-//  background: blue !important;
-//  :host::ng-deep * {
-//    background: blue !important;
-//  }
-//
-//  :host::ng-deep .klass-3{
-//    background: blue !important;
-//    font-size: 3rem !important
-//  }
-//
-//  :host::ng-deep .klass-3 :hover {
-//    background: blue !important;
-//
-//  }
-//}
-
-
-.inheritCursors{
- color: green !important;
+.pointer-remove {
   pointer-events: none !important;
-  //pointer-events: auto !important;
+}
 
-  ::ng-deep * &:hover{
-    //background-color: transparent !important;
-    //pointer-events: none !important;
-    //background: none !important;
-  }
+.hover-card :hover {
+  background-color: red;
 }

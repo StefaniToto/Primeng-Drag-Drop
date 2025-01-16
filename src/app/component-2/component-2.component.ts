@@ -17,11 +17,6 @@ import { NgForOf } from "@angular/common";
 })
 export class Component2Component {
   movies = [
-    "Episode I - The Phantom Menace",
-    "Episode II - Attack of the Clones",
-    "Episode III - Revenge of the Sith",
-    "Episode IV - A New Hope",
-    "Episode V - The Empire Strikes Back",
     "Episode VI - Return of the Jedi",
     "Episode VII - The Force Awakens",
     "Episode VIII - The Last Jedi",
@@ -29,19 +24,21 @@ export class Component2Component {
   ];
   bodyElement: HTMLElement = document.body;
   drop(event: CdkDragDrop<string[]>) {
-    console.log("ended");
-
     this.bodyElement
-      .getElementsByClassName("klass-3")[0]
-      .classList.remove("inheritCursors");
+      .getElementsByClassName("content")[0]
+      .classList.remove("pointer-remove");
     moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
   }
 
-  dragStart($event: any) {
-    console.log("started", this.bodyElement.classList);
-
+  dragStart() {
+    this.bodyElement
+      .getElementsByClassName("content")[0]
+      .classList.add("pointer-remove");
+    this.bodyElement
+      .getElementsByClassName("klass-1")[0]
+      .classList.add("pointer-add");
     this.bodyElement
       .getElementsByClassName("klass-3")[0]
-      .classList.add("inheritCursors");
+      .classList.add("pointer-add");
   }
 }

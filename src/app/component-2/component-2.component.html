@@ -1,15 +1,10 @@
-<p>component-2 works!</p>
-<div
-  cdkDropList
-  class="example-list"
-  (cdkDropListEntered)="dragStart($event)"
-  (cdkDropListDropped)="drop($event)"
->
+<p>Component-2</p>
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
   <div
     class="example-box"
     *ngFor="let movie of movies"
     cdkDrag
-    (cdkDragStarted)="dragStart($event)"
+    (cdkDragStarted)="dragStart()"
   >
     <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
     {{ movie }}
